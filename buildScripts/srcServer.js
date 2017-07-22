@@ -33,7 +33,7 @@ app.get('/users',function(req,res){
 res.json ([
 {"id":1,"firstName":"ram","lastName":"Smith","email":"div2@gmail.com"},
 {"id":2,"firstName":"ram","lastName":"Smith","email":"div2@gmail.com"},
-{"id":3,"firstName":"ram","lastName":"Smith","email":"div2@gmail.com"},
+{"id":3,"firstName":"ram","lastName":"Smith","email":"div2@gmail.com"}
 
 ]
 );

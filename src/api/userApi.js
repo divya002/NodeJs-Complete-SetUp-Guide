@@ -12,7 +12,7 @@ export function deleteUser(id){
     return del(`users/${id}`);
 }
 
-function get(url){
+function get(url){ 
     return fetch(baseUrl+url).then(onSuccess,onError); 
 }
 //Can't call func delete since reserved word

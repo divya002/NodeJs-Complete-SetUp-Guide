@@ -7,14 +7,36 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program"
-           //"program": "${workspaceRoot}/src/api/userApi.js"
+            "name": "Launch Program",
+            "outFiles": ["${workspaceRoot}/out/**/*.js"],
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
+           "program": "${workspaceRoot}/src/api/baseUrl.js"
         },
-        {
+
+{
+  "name": "Launch2",
+  "type": "node",
+  "request": "launch",
+  "program": "${workspaceRoot}/src/index.js",
+  "stopOnEntry": false,
+  "args": [],
+  "cwd": "${workspaceRoot}",
+  "preLaunchTask": null,
+  "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
+  "runtimeArgs": [
+    "--nolazy"],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "console": "internalConsole",
+  "sourceMaps": true,
+  "outFiles": []
+},
+{
     "name": "Launch via NPM",
     "type": "node",
     "request": "launch",
-    "cwd": "${workspaceRoot}/src/api",
+    "cwd": "${workspaceRoot}/src/api/*.js",
     "runtimeExecutable": "npm",
     "runtimeArgs": [
         "run-script", "debug"
